@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import logo from "../../../assets/logo1.png";
 
 const Navbar = () => {
@@ -12,7 +13,11 @@ const Navbar = () => {
         </div>
       </div>
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1"></ul>
+        <ul className="menu menu-horizontal px-1 flex items-center gap-12 font-semibold text-lg">
+          <NavLink to={"/"}>Home</NavLink>
+          <NavLink to={"/brands"}>Brands</NavLink>
+          <NavLink to={"/aboutDev"}>About Dev</NavLink>
+        </ul>
       </div>
       <div className="navbar-end">
         <a className="btn">Button</a>
