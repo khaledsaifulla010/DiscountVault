@@ -1,7 +1,9 @@
+import Navbar from "../../components/Header/Navbar/Navbar";
+
 const MainLayouts = () => {
   return (
-    <div>
-      <div>Hello world!</div>
+    <div className="max-w-[1400px] mx-auto mt-8">
+      <Navbar></Navbar>
     </div>
   );
 };
