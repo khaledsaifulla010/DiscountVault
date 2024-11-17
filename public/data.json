@@ -1,6 +1,6 @@
 [
   {
-    "_id": "1",
+    "id": "1",
     "brand_name": "Amazon",
     "rating": 4.8,
     "description": "The world's largest online marketplace.",
@@ -15,11 +15,18 @@
         "expiry-date": "2024-12-31",
         "condition": "Minimum purchase of $100",
         "cupon_type": "Discount"
+      },
+      {
+        "coupon-code": "AMAZON25",
+        "description": "25% off on select electronics",
+        "expiry-date": "2024-12-31",
+        "condition": "Minimum purchase of $120",
+        "cupon_type": "Discount"
       }
     ]
   },
   {
-    "_id": "2",
+    "id": "2",
     "brand_name": "eBay",
     "rating": 4.5,
     "description": "Online auctions and consumer-to-consumer sales.",
@@ -34,11 +41,25 @@
         "expiry-date": "2024-11-30",
         "condition": "Valid for PayPal transactions",
         "cupon_type": "Cashback"
+      },
+      {
+        "coupon-code": "EBAY50",
+        "description": "50% cashback on all purchases",
+        "expiry-date": "2024-11-30",
+        "condition": "Valid for PayPal transactions",
+        "cupon_type": "Cashback"
+      },
+      {
+        "coupon-code": "EBAY15",
+        "description": "15% cashback on all purchases",
+        "expiry-date": "2024-11-30",
+        "condition": "Valid for PayPal transactions",
+        "cupon_type": "Cashback"
       }
     ]
   },
   {
-    "_id": "3",
+    "id": "3",
     "brand_name": "Walmart",
     "rating": 4.6,
     "description": "Affordable shopping for everything under one roof.",
@@ -53,11 +74,25 @@
         "expiry-date": "2024-12-15",
         "condition": "Minimum order of $50",
         "cupon_type": "Grocery"
+      },
+      {
+        "coupon-code": "WALMART30",
+        "description": "30% off on online grocery orders",
+        "expiry-date": "2024-12-15",
+        "condition": "Minimum order of $250",
+        "cupon_type": "Grocery"
+      },
+      {
+        "coupon-code": "WALMART25",
+        "description": "25% off on online grocery orders",
+        "expiry-date": "2024-12-15",
+        "condition": "Minimum order of $150",
+        "cupon_type": "Grocery"
       }
     ]
   },
   {
-    "_id": "4",
+    "id": "4",
     "brand_name": "AliExpress",
     "rating": 4.4,
     "description": "A global retail marketplace from Alibaba.",
@@ -72,11 +107,18 @@
         "expiry-date": "2024-12-10",
         "condition": "Valid for first-time users",
         "cupon_type": "Introductory"
+      },
+      {
+        "coupon-code": "ALI52",
+        "description": "$52 off on orders above $50",
+        "expiry-date": "2024-12-10",
+        "condition": "Valid for first-time users",
+        "cupon_type": "Introductory"
       }
     ]
   },
   {
-    "_id": "5",
+    "id": "5",
     "brand_name": "Etsy",
     "rating": 4.7,
     "description": "Handmade, vintage items and craft supplies.",
@@ -95,14 +137,14 @@
     ]
   },
   {
-    "_id": "6",
+    "id": "6",
     "brand_name": "Best Buy",
     "rating": 4.6,
     "description": "Leading electronics retailer in the US.",
     "brand_logo": "https://i.ibb.co.com/LrnH5LX/best-buy.png",
     "shop-Link": "https://www.bestbuy.com",
     "category": "Electronics",
-    "isSaleOn": true,
+    "isSaleOn": false,
     "coupons": [
       {
         "coupon-code": "BESTBUY15",
@@ -114,14 +156,14 @@
     ]
   },
   {
-    "_id": "7",
+    "id": "7",
     "brand_name": "Zara",
     "rating": 4.5,
     "description": "Trendy and affordable fashion.",
     "brand_logo": "https://i.ibb.co.com/wLwPzFZ/zara.png",
     "shop-Link": "https://www.zara.com",
     "category": "Fashion",
-    "isSaleOn": true,
+    "isSaleOn": false,
     "coupons": [
       {
         "coupon-code": "ZARA10",
@@ -133,14 +175,14 @@
     ]
   },
   {
-    "_id": "8",
+    "id": "8",
     "brand_name": "Nike",
     "rating": 4.8,
     "description": "Performance footwear and apparel.",
     "brand_logo": "https://i.ibb.co.com/KxzT4Vn/nike.png",
     "shop-Link": "https://www.nike.com",
     "category": "Sports",
-    "isSaleOn": true,
+    "isSaleOn": false,
     "coupons": [
       {
         "coupon-code": "NIKE25",
@@ -153,14 +195,14 @@
   },
 
   {
-    "_id": "9",
+    "id": "9",
     "brand_name": "Target",
     "rating": 4.5,
     "description": "One-stop shop for daily essentials.",
     "brand_logo": "https://i.ibb.co.com/HKNj80t/Target.png",
     "shop-Link": "https://www.target.com",
     "category": "Various",
-    "isSaleOn": true,
+    "isSaleOn": false,
     "coupons": [
       {
         "coupon-code": "TARGET5",
@@ -172,7 +214,7 @@
     ]
   },
   {
-    "_id": "10",
+    "id": "10",
     "brand_name": "H&M",
     "rating": 4.4,
     "description": "Affordable fashion for all.",
@@ -191,14 +233,14 @@
     ]
   },
   {
-    "_id": "11",
+    "id": "11",
     "brand_name": "IKEA",
     "rating": 4.8,
     "description": "Stylish furniture and home accessories.",
     "brand_logo": "https://i.ibb.co.com/8rx3ntk/ikea.png",
     "shop-Link": "https://www.ikea.com",
     "category": "Home",
-    "isSaleOn": true,
+    "isSaleOn": false,
     "coupons": [
       {
         "coupon-code": "IKEA15",
