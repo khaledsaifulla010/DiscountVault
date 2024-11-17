@@ -1,5 +1,6 @@
 import { NavLink } from "react-router-dom";
 import logo from "../../../assets/logo1.png";
+import "./Navbar.css";
 
 const Navbar = () => {
   return (
@@ -13,7 +14,7 @@ const Navbar = () => {
         </div>
       </div>
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1 flex items-center gap-12 font-semibold text-lg">
+        <ul className="menu menu-horizontal px-1 flex items-center gap-12 font-bold text-lg">
           <NavLink to={"/"}>Home</NavLink>
           <NavLink to={"/brands"}>Brands</NavLink>
           <NavLink to={"/aboutDev"}>About Dev</NavLink>
