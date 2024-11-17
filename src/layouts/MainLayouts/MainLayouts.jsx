@@ -1,6 +1,7 @@
 import Footer from "../../components/Footer/Footer";
 import Banner from "../../components/Header/Banner/Banner";
 import Navbar from "../../components/Header/Navbar/Navbar";
+import TopBrands from "../../components/Main/TopBrands/TopBrands";
 
 const MainLayouts = () => {
   return (
@@ -10,10 +11,12 @@ const MainLayouts = () => {
         <Banner></Banner>
       </header>
 
-      <main></main>
+      <main>
+        <TopBrands></TopBrands>
+      </main>
 
       <footer>
-        <Footer></Footer>
+        {/* <Footer></Footer> */}
       </footer>
     </div>
   );
