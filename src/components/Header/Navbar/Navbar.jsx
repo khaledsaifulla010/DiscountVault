@@ -1,7 +1,8 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import logo from "../../../assets/logo1.png";
 import "./Navbar.css";
 import { FaUserCircle } from "react-icons/fa";
+import { FiLogIn } from "react-icons/fi";
 const Navbar = () => {
   return (
     <div className="navbar bg-base-100">
@@ -21,19 +22,18 @@ const Navbar = () => {
         </ul>
       </div>
       <div className="navbar-end">
-        <div className="dropdown dropdown-bottom dropdown-end">
+        <div className="dropdown dropdown-hover dropdown-bottom dropdown-end">
           <div tabIndex={0} role="button" className="text-4xl m-1">
             <FaUserCircle />
           </div>
           <ul
             tabIndex={0}
-            className="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 shadow border-2 font-bold"
+            className="dropdown-content  menu  rounded-box z-[1] w-40 p-2 shadow border-2 font-bold"
           >
             <li>
-              <a>Item 1</a>
-            </li>
-            <li>
-              <a>Item 2</a>
+              <Link to={"/login"} className="text-lg ml-4">
+                Login <FiLogIn />
+              </Link>
             </li>
           </ul>
         </div>
