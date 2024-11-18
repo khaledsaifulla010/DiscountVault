@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "name": "Sophia Taylor",
+    "image": "https://i.ibb.co.com/Hr90mrZ/person-2.jpg",
+    "rating": 4.4,
+    "review_description": "Discount Vault has completely changed how I shop! I always find the best deals, and the trending section is a game-changer."
+  },
+  {
+    "id": 2,
+    "name": "Liam Johnson",
+    "image": "https://i.ibb.co.com/XYzLs74/person-3.jpg",
+    "rating": 4.7,
+    "review_description": "The Exclusive Vault Picks are my favorite! The deals are verified, and I've saved so much on gadgets and clothing."
+  },
+  {
+    "id": 3,
+    "name": "Emily Davis",
+    "image": "https://i.ibb.co.com/K6WQQs6/person-1.jpg",
+    "rating": 3.5,
+    "review_description": "I love the Spin & Save Wheel! It's so fun and rewarding. I’ve even won a cashback deal last week."
+  }
+]

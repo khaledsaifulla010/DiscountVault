@@ -2,6 +2,7 @@ import Footer from "../../components/Footer/Footer";
 import Banner from "../../components/Header/Banner/Banner";
 import Navbar from "../../components/Header/Navbar/Navbar";
 import BrandsOnSell from "../../components/Main/BrandsOnSell/BrandsOnSell";
+import ClientsReview from "../../components/Main/ClientsReview/ClientsReview";
 import TopBrands from "../../components/Main/TopBrands/TopBrands";
 
 const MainLayouts = () => {
@@ -15,6 +16,7 @@ const MainLayouts = () => {
       <main>
         <TopBrands></TopBrands>
         <BrandsOnSell></BrandsOnSell>
+        <ClientsReview></ClientsReview>
       </main>
 
       <footer>{/* <Footer></Footer> */}</footer>

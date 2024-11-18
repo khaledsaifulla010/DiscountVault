@@ -13,7 +13,7 @@ const BrandsOnSell = () => {
 
   return (
     <div>
-      <h1 className="text-6xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-red-600">
+      <h1 className="text-6xl font-bold text-center bg-clip-text mt-36 text-transparent bg-gradient-to-r from-purple-500 to-red-600">
         Brands on Sell
       </h1>
       <div className="grid grid-cols-3 mt-12 gap-y-12">
