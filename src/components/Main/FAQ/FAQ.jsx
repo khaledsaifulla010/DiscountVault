@@ -1,6 +1,6 @@
 const FAQ = () => {
   return (
-    <div className="mt-48 mb-36">
+    <div className="mt-48 mb-24">
       <h1 className="text-6xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-r from-green-500 to-blue-600">
         FAQ(Frequently Asked Questions)
       </h1>
@@ -19,7 +19,7 @@ const FAQ = () => {
           </p>
         </div>
       </div>
-      <div className="collapse collapse-plus bg-base-200 mt-4">
+      <div className="collapse collapse-plus bg-base-200 mt-8">
         <input type="radio" name="my-accordion-3" />
         <div className="collapse-title text-xl font-bold">
           2. Are the discount codes on your site always valid?
@@ -34,7 +34,7 @@ const FAQ = () => {
           </p>
         </div>
       </div>
-      <div className="collapse collapse-plus bg-base-200 mt-4">
+      <div className="collapse collapse-plus bg-base-200 mt-8">
         <input type="radio" name="my-accordion-3" />
         <div className="collapse-title text-xl font-bold">
           3. Can I share a discount code with my friends?
