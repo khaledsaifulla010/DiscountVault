@@ -19,7 +19,7 @@ const ClientsReview = () => {
 
   return (
     <div>
-      <h1 className="text-6xl font-bold text-center bg-clip-text mt-24 text-transparent bg-gradient-to-r from-pink-500 to-purple-600">
+      <h1 className="text-6xl font-bold text-center bg-clip-text  text-transparent bg-gradient-to-r from-pink-500 to-purple-600">
         Our Clients Reviews
       </h1>
 

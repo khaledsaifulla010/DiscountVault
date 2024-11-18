@@ -7,7 +7,6 @@ const AllBrands = () => {
 
   return (
     <div>
-      <h1>Brands.................. {allBrands.length} </h1>
 
       <div className="grid grid-cols-3 gap-y-6 mb-36">
         {allBrands.map((brand) => (

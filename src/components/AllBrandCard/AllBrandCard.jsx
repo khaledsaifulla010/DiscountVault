@@ -1,6 +1,7 @@
 import { Rating } from "@smastrom/react-rating";
 
 import "@smastrom/react-rating/style.css";
+import "animate.css";
 
 const AllBrandCard = ({ brand }) => {
   console.log(brand);
@@ -43,7 +44,9 @@ const AllBrandCard = ({ brand }) => {
               View Coupons
             </button>
             {isSaleOn && (
-              <h1 className="font-bold text-red-600 text-lg">Sales is on</h1>
+              <h1 className="font-bold text-red-600 text-lg animate__animated animate__bounce">
+                Sales is on
+              </h1>
             )}
           </div>
         </div>
