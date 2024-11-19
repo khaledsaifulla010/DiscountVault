@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import loginPage from "../../assets/authImages/loginPage.jpg";
+import { FcGoogle } from "react-icons/fc";
 
 const Login = () => {
   return (
@@ -56,6 +57,10 @@ const Login = () => {
             </Link>
           </div>
           <div className="divider px-9">OR</div>
+          <button className="border p-2 rounded-xl w-[530px] flex items-center gap-2 ml-8 mb-8 mt-2 text-lg shadow-md hover:shadow-lg transition duration-300 ease-in-out transform hover:scale-105 font-bold">
+            <FcGoogle className="ml-40 text-2xl mt-1"></FcGoogle>
+            Login with Google
+          </button>
         </div>
       </div>
     </div>
