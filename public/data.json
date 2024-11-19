@@ -5,23 +5,23 @@
     "rating": 4.8,
     "description": "The world's largest online marketplace.",
     "brand_logo": "https://i.ibb.co.com/qg53j97/amazon.png",
-    "shop-Link": "https://www.amazon.com",
+    "shopLink": "https://www.amazon.com",
     "category": "Electronics",
     "isSaleOn": true,
     "coupons": [
       {
-        "coupon-code": "AMAZON20",
+        "couponCode": "AMAZON20",
         "description": "20% off on select electronics",
-        "expiry-date": "2024-12-31",
+        "expiryDate": "2024-12-31",
         "condition": "Minimum purchase of $100",
-        "cupon_type": "Discount"
+        "couponType": "Discount"
       },
       {
-        "coupon-code": "AMAZON25",
+        "couponCode": "AMAZON25",
         "description": "25% off on select electronics",
-        "expiry-date": "2024-12-31",
+        "expiryDate": "2024-12-31",
         "condition": "Minimum purchase of $120",
-        "cupon_type": "Discount"
+        "couponType": "Discount"
       }
     ]
   },
@@ -31,30 +31,30 @@
     "rating": 4.5,
     "description": "Online auctions and consumer-to-consumer sales.",
     "brand_logo": "https://i.ibb.co.com/80rrRwv/ebay.png",
-    "shop-Link": "https://www.ebay.com",
+    "shopLink": "https://www.ebay.com",
     "category": "Various",
     "isSaleOn": true,
     "coupons": [
       {
-        "coupon-code": "EBAY5",
+        "couponCode": "EBAY5",
         "description": "5% cashback on all purchases",
-        "expiry-date": "2024-11-30",
+        "expiryDate": "2024-11-30",
         "condition": "Valid for PayPal transactions",
-        "cupon_type": "Cashback"
+        "couponType": "Cashback"
       },
       {
-        "coupon-code": "EBAY50",
+        "couponCode": "EBAY50",
         "description": "50% cashback on all purchases",
-        "expiry-date": "2024-11-30",
+        "expiryDate": "2024-11-30",
         "condition": "Valid for PayPal transactions",
-        "cupon_type": "Cashback"
+        "couponType": "Cashback"
       },
       {
-        "coupon-code": "EBAY15",
+        "couponCode": "EBAY15",
         "description": "15% cashback on all purchases",
-        "expiry-date": "2024-11-30",
+        "expiryDate": "2024-11-30",
         "condition": "Valid for PayPal transactions",
-        "cupon_type": "Cashback"
+        "couponType": "Cashback"
       }
     ]
   },
@@ -64,30 +64,30 @@
     "rating": 4.6,
     "description": "Affordable shopping for everything under one roof.",
     "brand_logo": "https://i.ibb.co.com/VtVFzCj/walmart.png",
-    "shop-Link": "https://www.walmart.com",
+    "shopLink": "https://www.walmart.com",
     "category": "Groceries",
     "isSaleOn": true,
     "coupons": [
       {
-        "coupon-code": "WALMART10",
+        "couponCode": "WALMART10",
         "description": "10% off on online grocery orders",
-        "expiry-date": "2024-12-15",
+        "expiryDate": "2024-12-15",
         "condition": "Minimum order of $50",
-        "cupon_type": "Grocery"
+        "couponType": "Grocery"
       },
       {
-        "coupon-code": "WALMART30",
+        "couponCode": "WALMART30",
         "description": "30% off on online grocery orders",
-        "expiry-date": "2024-12-15",
+        "expiryDate": "2024-12-15",
         "condition": "Minimum order of $250",
-        "cupon_type": "Grocery"
+        "couponType": "Grocery"
       },
       {
-        "coupon-code": "WALMART25",
+        "couponCode": "WALMART25",
         "description": "25% off on online grocery orders",
-        "expiry-date": "2024-12-15",
+        "expiryDate": "2024-12-15",
         "condition": "Minimum order of $150",
-        "cupon_type": "Grocery"
+        "couponType": "Grocery"
       }
     ]
   },
@@ -97,23 +97,23 @@
     "rating": 4.4,
     "description": "A global retail marketplace from Alibaba.",
     "brand_logo": "https://i.ibb.co.com/Qv1v3Xb/ali-Express.png",
-    "shop-Link": "https://www.aliexpress.com",
+    "shopLink": "https://www.aliexpress.com",
     "category": "Electronics",
     "isSaleOn": true,
     "coupons": [
       {
-        "coupon-code": "ALI5",
+        "couponCode": "ALI5",
         "description": "$5 off on orders above $50",
-        "expiry-date": "2024-12-10",
+        "expiryDate": "2024-12-10",
         "condition": "Valid for first-time users",
-        "cupon_type": "Introductory"
+        "couponType": "Introductory"
       },
       {
-        "coupon-code": "ALI52",
+        "couponCode": "ALI52",
         "description": "$52 off on orders above $50",
-        "expiry-date": "2024-12-10",
+        "expiryDate": "2024-12-10",
         "condition": "Valid for first-time users",
-        "cupon_type": "Introductory"
+        "couponType": "Introductory"
       }
     ]
   },
@@ -123,16 +123,16 @@
     "rating": 4.7,
     "description": "Handmade, vintage items and craft supplies.",
     "brand_logo": "https://i.ibb.co.com/t87qcZD/esty.png",
-    "shop-Link": "https://www.etsy.com",
+    "shopLink": "https://www.etsy.com",
     "category": "Handmade",
     "isSaleOn": false,
     "coupons": [
       {
-        "coupon-code": "ETSY20",
+        "couponCode": "ETSY20",
         "description": "20% off on handmade items",
-        "expiry-date": "2024-11-20",
+        "expiryDate": "2024-11-20",
         "condition": "For participating sellers only",
-        "cupon_type": "Product-specific"
+        "couponType": "Product-specific"
       }
     ]
   },
@@ -142,16 +142,16 @@
     "rating": 4.6,
     "description": "Leading electronics retailer in the US.",
     "brand_logo": "https://i.ibb.co.com/LrnH5LX/best-buy.png",
-    "shop-Link": "https://www.bestbuy.com",
+    "shopLink": "https://www.bestbuy.com",
     "category": "Electronics",
     "isSaleOn": false,
     "coupons": [
       {
-        "coupon-code": "BESTBUY15",
+        "couponCode": "BESTBUY15",
         "description": "15% off on headphones",
-        "expiry-date": "2024-12-25",
+        "expiryDate": "2024-12-25",
         "condition": "Valid on selected brands",
-        "cupon_type": "Discount"
+        "couponType": "Discount"
       }
     ]
   },
@@ -161,16 +161,16 @@
     "rating": 4.5,
     "description": "Trendy and affordable fashion.",
     "brand_logo": "https://i.ibb.co.com/wLwPzFZ/zara.png",
-    "shop-Link": "https://www.zara.com",
+    "shopLink": "https://www.zara.com",
     "category": "Fashion",
     "isSaleOn": false,
     "coupons": [
       {
-        "coupon-code": "ZARA10",
+        "couponCode": "ZARA10",
         "description": "10% off all clothing items",
-        "expiry-date": "2024-11-30",
+        "expiryDate": "2024-11-30",
         "condition": "Valid for online purchases",
-        "cupon_type": "Seasonal"
+        "couponType": "Seasonal"
       }
     ]
   },
@@ -180,16 +180,16 @@
     "rating": 4.8,
     "description": "Performance footwear and apparel.",
     "brand_logo": "https://i.ibb.co.com/KxzT4Vn/nike.png",
-    "shop-Link": "https://www.nike.com",
+    "shopLink": "https://www.nike.com",
     "category": "Sports",
     "isSaleOn": false,
     "coupons": [
       {
-        "coupon-code": "NIKE25",
+        "couponCode": "NIKE25",
         "description": "25% off on footwear",
-        "expiry-date": "2024-12-20",
+        "expiryDate": "2024-12-20",
         "condition": "Valid for Nike members",
-        "cupon_type": "Membership"
+        "couponType": "Membership"
       }
     ]
   },
@@ -200,16 +200,16 @@
     "rating": 4.5,
     "description": "One-stop shop for daily essentials.",
     "brand_logo": "https://i.ibb.co.com/HKNj80t/Target.png",
-    "shop-Link": "https://www.target.com",
+    "shopLink": "https://www.target.com",
     "category": "Various",
     "isSaleOn": false,
     "coupons": [
       {
-        "coupon-code": "TARGET5",
+        "couponCode": "TARGET5",
         "description": "$5 off orders above $25",
-        "expiry-date": "2024-11-30",
+        "expiryDate": "2024-11-30",
         "condition": "Valid for Target Circle members",
-        "cupon_type": "Loyalty"
+        "couponType": "Loyalty"
       }
     ]
   },
@@ -219,16 +219,16 @@
     "rating": 4.4,
     "description": "Affordable fashion for all.",
     "brand_logo": "https://i.ibb.co.com/hCYbK81/H-M.png",
-    "shop-Link": "https://www.hm.com",
+    "shopLink": "https://www.hm.com",
     "category": "Fashion",
     "isSaleOn": false,
     "coupons": [
       {
-        "coupon-code": "HM20",
+        "couponCode": "HM20",
         "description": "20% off selected items",
-        "expiry-date": "2024-12-05",
+        "expiryDate": "2024-12-05",
         "condition": "Valid for online orders",
-        "cupon_type": "Seasonal"
+        "couponType": "Seasonal"
       }
     ]
   },
@@ -238,16 +238,16 @@
     "rating": 4.8,
     "description": "Stylish furniture and home accessories.",
     "brand_logo": "https://i.ibb.co.com/8rx3ntk/ikea.png",
-    "shop-Link": "https://www.ikea.com",
+    "shopLink": "https://www.ikea.com",
     "category": "Home",
     "isSaleOn": false,
     "coupons": [
       {
-        "coupon-code": "IKEA15",
+        "couponCode": "IKEA15",
         "description": "15% off on home decor",
-        "expiry-date": "2024-12-20",
+        "expiryDate": "2024-12-20",
         "condition": "No minimum order required",
-        "cupon_type": "General"
+        "couponType": "General"
       }
     ]
   }

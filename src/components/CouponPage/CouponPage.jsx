@@ -7,7 +7,7 @@ const CouponPage = () => {
   const allCoupons = useLoaderData();
   console.log(allCoupons);
 
-  const { brand_name, brand_logo, rating } = allCoupons;
+  const { brand_name, brand_logo, rating, coupons } = allCoupons;
 
   return (
     <div>
@@ -27,20 +27,36 @@ const CouponPage = () => {
         </div>
       </div>
 
-      <div className="card bg-base-100 w-96 shadow-xl mt-24">
-        <figure>
-          <img
-            src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-            alt="Shoes"
-          />
-        </figure>
-        <div className="card-body">
-          <h2 className="card-title">Shoes!</h2>
-          <p>If a dog chews shoes whose shoes does he choose?</p>
-          <div className="card-actions justify-end">
-            <button className="btn btn-primary">Buy Now</button>
+      <div className="grid grid-cols-3 gap-6 p-6 mb-36 mt-12">
+        {coupons.map((coupon, index) => (
+          <div
+            key={index}
+            className="border p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 bg-white"
+          >
+            <h2 className="text-xl font-bold mb-4">
+              <span className="text-gray-700">Coupon Code:</span>{" "}
+              <span className="text-blue-500">{coupon.couponCode}</span>
+            </h2>
+            <p className="text-gray-600 text-base mb-4 font-semibold">
+              {coupon.description}
+            </p>
+            <p className="text-base text-gray-700 mb-4 font-semibold">
+              <strong className="text-orange-500 ">Condition:</strong>
+              {coupon.condition}
+            </p>
+            <div className="flex items-center justify-between gap-4">
+              <p className="text-sm text-red-500 font-medium border border-red-300 p-2 rounded-xl bg-red-100">
+                <strong>Expires:</strong> {coupon.expiryDate}
+              </p>
+              <p className="text-sm text-green-500 font-medium border border-green-300 p-2 rounded-xl bg-green-100">
+                <strong>Type:</strong> {coupon.couponType}
+              </p>
+            </div>
+            <button className="px-4 py-2 mt-8 bg-blue-500 text-white rounded-lg shadow-md hover:bg-blue-600 transition-colors duration-300 w-full font-bold">
+              Copy Code
+            </button>
           </div>
-        </div>
+        ))}
       </div>
     </div>
   );
