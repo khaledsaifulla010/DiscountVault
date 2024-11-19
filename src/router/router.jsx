@@ -10,6 +10,7 @@ import ForgetPassword from "../Authentications/ForgetPassword/ForgetPassword";
 import MyProfile from "../components/MyProfile/MyProfile";
 import UpdateInformation from "../Authentications/UpdateInformation/UpdateInformation";
 import PrivateRoute from "../PrivateRoute/PrivateRoute";
+import AboutDev from "../components/AboutDev/AboutDev";
 
 const router = createBrowserRouter([
   {
@@ -40,6 +41,10 @@ const router = createBrowserRouter([
           const newData = data.find((brand) => brand.id === params.id);
           return newData;
         },
+      },
+      {
+        path: "/aboutDev",
+        element: <AboutDev></AboutDev>,
       },
       {
         path: "/login",
