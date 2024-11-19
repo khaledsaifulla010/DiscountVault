@@ -5,12 +5,30 @@ import { useContext } from "react";
 import { AuthContext } from "../../Provider/AuthProvider/AuthProvider";
 
 const Login = () => {
-  const { googleSignIn } = useContext(AuthContext);
+  const { googleSignIn, logIn } = useContext(AuthContext);
 
   // Sign in With Google//
 
   const handleGoogleSignIn = () => {
     googleSignIn()
+      .then((result) => {
+        console.log(result.user);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+
+  // Sign in with email & password //
+
+  const handleSignIn = (e) => {
+    e.preventDefault();
+
+    const email = e.target.email.value;
+    const password = e.target.password.value;
+    console.log(email, password);
+
+    logIn(email, password)
       .then((result) => {
         console.log(result.user);
       })
@@ -27,7 +45,7 @@ const Login = () => {
         </div>
 
         <div className="card bg-base-100 border w-[600px] shadow-lg">
-          <form className="card-body">
+          <form className="card-body" onSubmit={handleSignIn}>
             <div className="form-control">
               <label className="label">
                 <span className="label-text font-bold text-xl">Email</span>

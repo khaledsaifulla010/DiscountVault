@@ -1,34 +1,39 @@
-import { createUserWithEmailAndPassword, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
+import {
+  createUserWithEmailAndPassword,
+  GoogleAuthProvider,
+  signInWithEmailAndPassword,
+  signInWithPopup,
+} from "firebase/auth";
 import { createContext } from "react";
 
 export const AuthContext = createContext();
 
-const googleProvider = new GoogleAuthProvider()
-import {auth} from '../../firebase/firebase.init'
+const googleProvider = new GoogleAuthProvider();
+import { auth } from "../../firebase/firebase.init";
 
 const AuthProvider = ({ children }) => {
+  //Sign In with Google //
 
-    //Sign In with Google // 
+  const googleSignIn = () => {
+    return signInWithPopup(auth, googleProvider);
+  };
 
-    const googleSignIn = ()=>{
-        return signInWithPopup(auth, googleProvider)
-    }
+  // Register with email & password //
 
-    // Register with email & password //
+  const signUp = (email, password) => {
+    return createUserWithEmailAndPassword(auth, email, password);
+  };
 
+  // Login with email & password //
 
-    const signUp = (email,password)=>{
-       return createUserWithEmailAndPassword(auth,email,password)
-    }
-
-
-
-
-
+  const logIn = (email, password) => {
+    return signInWithEmailAndPassword(auth, email, password);
+  };
 
   const authInfo = {
     googleSignIn,
     signUp,
+    logIn,
   };
 
   return (
