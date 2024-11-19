@@ -2,10 +2,7 @@
 
 ## Project Live-Link : https://discountvault-b5244.web.app/
 
-### Purpose : This project is a simple Coupon Collecting Application designed to help users easily find and use discount coupons for popular e-commerce shops in Bangladesh.
-
-There are a lot of ecommerce stores that provide various types of vouchers and coupon codes for discounts . Our application will collect all the coupons available on each store so that people can easily achieve discounts and save money .
-Users can sign up or log in using their email or Google account through Firebase Authentication. Once logged in, users can browse available coupons for different brands, see details like discount amount, expiry date, and product categories, and copy coupon codes with a single click.
+### Purpose : This project is a simple Coupon Collecting Application designed to help users easily find and use discount coupons for popular e-commerce shops in Bangladesh.There are a lot of ecommerce stores that provide various types of vouchers and coupon codes for discounts . Our application will collect all the coupons available on each store so that people can easily achieve discounts and save money.Users can sign up or log in using their email or Google account through Firebase Authentication. Once logged in, users can browse available coupons for different brands, see details like discount amount, expiry date, and product categories, and copy coupon codes with a single click.
 
 ### Key Feature
 
