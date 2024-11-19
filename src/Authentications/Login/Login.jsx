@@ -14,9 +14,11 @@ const Login = () => {
     googleSignIn()
       .then((result) => {
         console.log(result.user);
+        toast.success("Login Sucessfully!", { position: "top-center" });
       })
       .catch((error) => {
         console.log(error);
+        toast.error("Something Went Wrong!", { position: "top-center" });
       });
   };
 
