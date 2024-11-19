@@ -27,11 +27,11 @@ Users can sign up or log in using their email or Google account through Firebase
 
 ### Using All NPM Packages
 
-**1."@smastrom/react-rating": "^1.5.0",**
-**2."animate.css": "^4.1.1",**
-**3."react-copy-to-clipboard": "^5.1.0",**
-**4."react-fast-marquee": "^1.6.5",**
-**5."react-icons": "^5.3.0",**
-**6."react-responsive-carousel": "^3.2.23",**
-**7."react-toastify": "^10.0.6",**
-**8."swiper": "^11.1.14"**
+**1."@smastrom/react-rating": "^1.5.0",**<br>
+**2."animate.css": "^4.1.1",**<br>
+**3."react-copy-to-clipboard": "^5.1.0",**<br>
+**4."react-fast-marquee": "^1.6.5",**<br>
+**5."react-icons": "^5.3.0",**<br>
+**6."react-responsive-carousel": "^3.2.23",**<br>
+**7."react-toastify": "^10.0.6",**<br>
+**8."swiper": "^11.1.14"**<br>
