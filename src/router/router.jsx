@@ -9,6 +9,7 @@ import Register from "../Authentications/Register/Register";
 import ForgetPassword from "../Authentications/ForgetPassword/ForgetPassword";
 import MyProfile from "../components/MyProfile/MyProfile";
 import UpdateInformation from "../Authentications/UpdateInformation/UpdateInformation";
+import PrivateRoute from "../PrivateRoute/PrivateRoute";
 
 const router = createBrowserRouter([
   {
@@ -27,7 +28,11 @@ const router = createBrowserRouter([
       },
       {
         path: "/brand/:id",
-        element: <CouponPage></CouponPage>,
+        element: (
+          <PrivateRoute>
+            <CouponPage></CouponPage>
+          </PrivateRoute>
+        ),
 
         loader: async ({ params }) => {
           const res = await fetch("/data.json");
