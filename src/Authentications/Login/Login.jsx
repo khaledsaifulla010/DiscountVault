@@ -7,10 +7,15 @@ import { toast } from "react-toastify";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 const Login = () => {
-  const { googleSignIn, logIn } = useContext(AuthContext);
+  const { googleSignIn, logIn, loading } = useContext(AuthContext);
   const redirect = useNavigate();
 
   const [showPassword, setShowPassword] = useState(false);
+  if (loading) {
+   return (
+     <span className="loading loading-infinity loading-lg text-secondary ml-[650px]"></span>
+   );
+  }
 
   // Sign in With Google//
 
@@ -88,6 +93,14 @@ const Login = () => {
                 {showPassword ? <FaEyeSlash /> : <FaEye />}
               </button>
             </div>
+            <label className="label ">
+              <Link
+                to={"/forgetPassword"}
+                className="label-text-alt text-red-500 font-semibold text-base underline"
+              >
+                Forgot password?
+              </Link>
+            </label>
             <div className="form-control mt-6">
               <button className="border p-2 w-full rounded-xl text-purple-500 bg-purple-200 border-purple-300 font-bold text-lg shadow-md transition duration-500 ease-in-out transform hover:scale-105 active:scale-95">
                 Login

@@ -6,10 +6,15 @@ import { useNavigate } from "react-router-dom";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 const Register = () => {
-  const { signUp } = useContext(AuthContext);
+  const { signUp, loading } = useContext(AuthContext);
   const redirect = useNavigate();
 
   const [showPassword, setShowPassword] = useState(false);
+  if (loading) {
+   return (
+     <span className="loading loading-infinity loading-lg text-secondary ml-[650px]"></span>
+   );
+  }
 
   const handleRegister = (e) => {
     e.preventDefault();
