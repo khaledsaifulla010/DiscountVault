@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import registerPage from "../../assets/authImages/registerPage.jpg";
 import { AuthContext } from "../../Provider/AuthProvider/AuthProvider";
+import { toast } from "react-toastify";
 
 const Register = () => {
   const { signUp } = useContext(AuthContext);
@@ -17,9 +18,11 @@ const Register = () => {
     signUp(email, password)
       .then((result) => {
         console.log(result.user);
+        toast.success("Register Sucessfully!", { position: "top-center" });
       })
       .catch((error) => {
         console.log(error);
+        toast.error("Something Went Wrong!", { position: "top-center" });
       });
   };
 
