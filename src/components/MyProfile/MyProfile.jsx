@@ -25,7 +25,9 @@ const MyProfile = () => {
             <div className="w-4 h-4 rounded-full border-2 bg-green-600 "></div>
           </div>
           <div>
-            <h1 className="font-bold text-2xl ml-8">{user?.displayName} </h1>
+            <h1 className="font-bold text-2xl text-teal-800">
+              {user?.displayName}{" "}
+            </h1>
             <h2 className="font-bold text-lg text-slate-500">{user?.email}</h2>
             <h3 className="font-bold text-sm text-slate-500">
               Last Seen:
@@ -82,6 +84,9 @@ const MyProfile = () => {
             </h1>
           </div>
           <div className="divider px-4 -mt-2"></div>
+          <button className="px-4 py-2  bg-blue-500 text-white rounded-lg shadow-md hover:bg-blue-600 transition duration-500 ease-in-out transform hover:scale-105 active:scale-95 font-bold w-[800px] mb-6 mt-4 ml-12 text-lg">
+            Update Your Information
+          </button>
         </div>
       </div>
     </div>
