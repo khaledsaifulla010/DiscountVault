@@ -3,7 +3,13 @@ import logo from "../../../assets/logo1.png";
 import "./Navbar.css";
 import { FaUserCircle } from "react-icons/fa";
 import { FiLogIn } from "react-icons/fi";
+import { useContext } from "react";
+import { AuthContext } from "../../../Provider/AuthProvider/AuthProvider";
+import userIcon from "../../../assets/authImages/user.png";
+
 const Navbar = () => {
+  const { user } = useContext(AuthContext);
+
   return (
     <div className="navbar bg-base-100">
       <div className="navbar-start">
@@ -24,7 +30,23 @@ const Navbar = () => {
       <div className="navbar-end">
         <div className="dropdown dropdown-hover dropdown-bottom dropdown-end">
           <div tabIndex={0} role="button" className="text-4xl m-1">
-            <FaUserCircle />
+            {user ? (
+              user.photoURL ? (
+                <img
+                  className="w-16 h-16 rounded-full border-2 p-1"
+                  src={user.photoURL}
+                  alt=""
+                />
+              ) : (
+                <img
+                  src={userIcon}
+                  alt="Default User"
+                  className="w-10 h-10 rounded-full border-2 p-1"
+                />
+              )
+            ) : (
+              <FaUserCircle />
+            )}
           </div>
           <ul
             tabIndex={0}
