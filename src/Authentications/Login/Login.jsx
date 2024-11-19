@@ -3,6 +3,7 @@ import loginPage from "../../assets/authImages/loginPage.jpg";
 import { FcGoogle } from "react-icons/fc";
 import { useContext } from "react";
 import { AuthContext } from "../../Provider/AuthProvider/AuthProvider";
+import { toast } from "react-toastify";
 
 const Login = () => {
   const { googleSignIn, logIn } = useContext(AuthContext);
@@ -31,9 +32,11 @@ const Login = () => {
     logIn(email, password)
       .then((result) => {
         console.log(result.user);
+        toast.success("Login Sucessfully!", { position: "top-center" });
       })
       .catch((error) => {
         console.log(error);
+        toast.error("Something Went Wrong!", { position: "top-center" });
       });
   };
 
