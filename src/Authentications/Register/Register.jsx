@@ -17,6 +17,18 @@ const Register = () => {
     const password = e.target.password.value;
     console.log(name, email, photo_URL, password);
 
+    // Password Validations //
+
+    const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z]).{6,}$/;
+
+    if (!passwordRegex.test(password)) {
+      toast.error(
+        "Atleast one Uppercase, one Lowercase Letter & minimum Six Characters!",
+        { position: "top-center" }
+      );
+      return;
+    }
+
     signUp(email, password)
       .then((result) => {
         console.log(result.user);
