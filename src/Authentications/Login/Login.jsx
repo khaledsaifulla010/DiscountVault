@@ -57,8 +57,8 @@ const Login = () => {
 
   return (
     <div>
-      <div className="rounded-xl p-2 w-[1300px] h-[105px] mt-8 bg-base-200">
-        <h1 className=" mt-4 text-6xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-pink-600">
+      <div className="rounded-xl p-2 w-[1300px] h-[90px] mt-8 bg-base-200">
+        <h1 className=" mt-4 text-5xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-pink-600">
           Please Login
         </h1>
       </div>
