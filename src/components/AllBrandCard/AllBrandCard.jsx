@@ -19,6 +19,8 @@ const AllBrandCard = ({ brand }) => {
 
   return (
     <div>
+      
+
       <div className="card bg-base-100 w-[400px] h-[480px] border-2 shadow-md hover:shadow-lg transition-shadow duration-300 mt-12 rounded-lg">
         <figure>
           <img
