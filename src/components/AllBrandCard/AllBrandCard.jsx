@@ -54,7 +54,7 @@ const AllBrandCard = ({ brand }) => {
           <div className="mt-8 flex items-center justify-between">
             <Link
               to={`/brand/${id}`}
-              className="p-3 rounded-lg font-bold text-lg bg-blue-100 text-blue-500 border border-blue-200 transition-colors duration-300"
+              className="p-3 rounded-lg font-bold text-lg bg-blue-100 text-blue-500 border border-blue-200 transition duration-500 ease-in-out transform hover:scale-105 active:scale-95"
             >
               View Coupons
             </Link>

@@ -63,7 +63,7 @@ const CouponPage = () => {
               <CopyToClipboard text={coupon.couponCode}>
                 <button
                   onClick={handleCopy}
-                  className="px-4 py-2  bg-blue-500 text-white rounded-lg shadow-md hover:bg-blue-600 transition-colors duration-300 font-bold w-full"
+                  className="px-4 py-2  bg-blue-500 text-white rounded-lg shadow-md hover:bg-blue-600 transition duration-500 ease-in-out transform hover:scale-105 active:scale-95 font-bold w-full"
                 >
                   Copy Code
                 </button>
@@ -72,7 +72,7 @@ const CouponPage = () => {
                 href={shopLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-4 py-2  bg-green-500 text-white rounded-lg shadow-md hover:bg-green-600 transition-colors duration-300 font-bold w-full text-center"
+                className="px-4 py-2  bg-green-500 text-white rounded-lg shadow-md hover:bg-green-600 transition duration-500 ease-in-out transform hover:scale-105 active:scale-95 font-bold w-full text-center"
               >
                 Use Now
               </a>
