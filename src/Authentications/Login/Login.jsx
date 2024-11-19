@@ -1,8 +1,13 @@
 import { Link } from "react-router-dom";
 import loginPage from "../../assets/authImages/loginPage.jpg";
 import { FcGoogle } from "react-icons/fc";
+import { useContext } from "react";
+import { AuthContext } from "../../Provider/AuthProvider/AuthProvider";
 
 const Login = () => {
+  const { name } = useContext(AuthContext);
+  console.log(name);
+
   return (
     <div>
       <div className="flex items-center justify-center mb-36 mt-12">
