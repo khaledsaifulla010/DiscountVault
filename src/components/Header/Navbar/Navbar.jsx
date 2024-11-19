@@ -5,7 +5,7 @@ import { FaUserCircle } from "react-icons/fa";
 import { FiLogIn } from "react-icons/fi";
 import { useContext } from "react";
 import { AuthContext } from "../../../Provider/AuthProvider/AuthProvider";
-import userIcon from "../../../assets/authImages/user.png";
+import userIcon from "../../../assets/authImages/userIcon.png";
 import { FiLogOut } from "react-icons/fi";
 import { toast } from "react-toastify";
 import { CgProfile } from "react-icons/cg";

@@ -1,5 +1,7 @@
 import { useContext } from "react";
 import { AuthContext } from "../../Provider/AuthProvider/AuthProvider";
+import userIcon from "../../assets/authImages/userIcon.png";
+import { FaUserCircle } from "react-icons/fa";
 
 const MyProfile = () => {
   const { user, loading } = useContext(AuthContext);
@@ -11,13 +13,25 @@ const MyProfile = () => {
 
   return (
     <div className="mb-36 mt-12">
-      <div className="card border max-w-[900px] mx-auto rounded-xl">
+      <div className="card border max-w-[900px] mx-auto rounded-xl shadow-lg bg-white">
         <div className="flex items-center ml-12 mt-8 gap-4">
-          <img
-            className="w-24 h-24  rounded-full border-2  p-1"
-            src={user.photoURL}
-            alt=""
-          />
+          {user ? (
+            user.photoURL ? (
+              <img
+                className="w-24 h-24 rounded-full border-2 p-1"
+                src={user.photoURL}
+                alt=""
+              />
+            ) : (
+              <img
+                src={userIcon}
+                alt="Default User"
+                className="w-10 h-10 rounded-full border-2 p-1"
+              />
+            )
+          ) : (
+            <FaUserCircle />
+          )}
           <div
             className="tooltip absolute left-[115px] top-[110px] tooltip-right tooltip-success"
             data-tip="Active"
@@ -25,8 +39,8 @@ const MyProfile = () => {
             <div className="w-4 h-4 rounded-full border-2 bg-green-600 "></div>
           </div>
           <div>
-            <h1 className="font-bold text-2xl text-teal-800">
-              {user?.displayName}{" "}
+            <h1 className="font-bold text-2xl text-purple-700">
+              {user?.displayName}
             </h1>
             <h2 className="font-bold text-lg text-slate-500">{user?.email}</h2>
             <h3 className="font-bold text-sm text-slate-500">
