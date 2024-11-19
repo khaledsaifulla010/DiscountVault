@@ -8,6 +8,7 @@ import { AuthContext } from "../../../Provider/AuthProvider/AuthProvider";
 import userIcon from "../../../assets/authImages/user.png";
 import { FiLogOut } from "react-icons/fi";
 import { toast } from "react-toastify";
+import { CgProfile } from "react-icons/cg";
 
 const Navbar = () => {
   const { user, signOutUser } = useContext(AuthContext);
@@ -58,16 +59,21 @@ const Navbar = () => {
           </div>
           <ul
             tabIndex={0}
-            className="dropdown-content  menu bg-base-100  rounded-box z-[1] w-40 p-2 shadow border-2 font-bold"
+            className="dropdown-content  menu bg-base-100  rounded-box z-[1] w-48 p-2 shadow border-2 font-bold"
           >
             <li>
-              <Link to={"/login"} className="text-lg ml-4">
+              <Link to={"/myProfile"} className="text-lg ml-2">
+                My Profile <CgProfile />
+              </Link>
+            </li>
+            <li>
+              <Link to={"/login"} className="text-lg ml-10 -mt-2">
                 Login <FiLogIn />
               </Link>
             </li>
             <li>
               {user ? (
-                <button onClick={hadnleSignOut} className="text-lg ml-4">
+                <button onClick={hadnleSignOut} className="text-lg ml-10 -mt-2">
                   LogOut <FiLogOut />
                 </button>
               ) : (
