@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import loginPage from "../../assets/authImages/loginPage.jpg";
 import { FcGoogle } from "react-icons/fc";
 import { useContext } from "react";
@@ -8,6 +8,8 @@ import { toast } from "react-toastify";
 const Login = () => {
   const { googleSignIn, logIn } = useContext(AuthContext);
 
+  const redirect = useNavigate();
+
   // Sign in With Google//
 
   const handleGoogleSignIn = () => {
@@ -15,6 +17,7 @@ const Login = () => {
       .then((result) => {
         console.log(result.user);
         toast.success("Login Sucessfully!", { position: "top-center" });
+        redirect("/");
       })
       .catch((error) => {
         console.log(error);
@@ -35,6 +38,7 @@ const Login = () => {
       .then((result) => {
         console.log(result.user);
         toast.success("Login Sucessfully!", { position: "top-center" });
+        redirect("/");
       })
       .catch((error) => {
         console.log(error);
