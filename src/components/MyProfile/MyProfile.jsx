@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { AuthContext } from "../../Provider/AuthProvider/AuthProvider";
 import userIcon from "../../assets/authImages/userIcon.png";
 import { FaUserCircle } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const MyProfile = () => {
   const { user, loading } = useContext(AuthContext);
@@ -99,7 +100,7 @@ const MyProfile = () => {
           </div>
           <div className="divider px-4 -mt-2"></div>
           <button className="px-4 py-2  bg-blue-500 text-white rounded-lg shadow-md hover:bg-blue-600 transition duration-500 ease-in-out transform hover:scale-105 active:scale-95 font-bold w-[800px] mb-6 mt-4 ml-12 text-lg">
-            Update Your Information
+            <Link to={"/updateInformation"}> Update Your Information</Link>
           </button>
         </div>
       </div>
