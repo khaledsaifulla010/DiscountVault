@@ -2,12 +2,19 @@ import { Link, useLoaderData, useParams } from "react-router-dom";
 import { Rating } from "@smastrom/react-rating";
 import { CopyToClipboard } from "react-copy-to-clipboard";
 import "@smastrom/react-rating/style.css";
-
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 const CouponPage = () => {
   const allCoupons = useLoaderData();
   console.log(allCoupons);
 
   const { brand_name, brand_logo, rating, coupons, shopLink } = allCoupons;
+
+  const handleCopy = () => {
+    toast.success("Coupon Code Copied!", {
+      position: "top-center",
+    });
+  };
 
   return (
     <div>
@@ -54,7 +61,10 @@ const CouponPage = () => {
             </div>
             <div className="flex items-center justify-between gap-4 mt-12">
               <CopyToClipboard text={coupon.couponCode}>
-                <button className="px-4 py-2  bg-blue-500 text-white rounded-lg shadow-md hover:bg-blue-600 transition-colors duration-300 font-bold w-full">
+                <button
+                  onClick={handleCopy}
+                  className="px-4 py-2  bg-blue-500 text-white rounded-lg shadow-md hover:bg-blue-600 transition-colors duration-300 font-bold w-full"
+                >
                   Copy Code
                 </button>
               </CopyToClipboard>
