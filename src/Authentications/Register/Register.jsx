@@ -1,6 +1,28 @@
+import { useContext } from "react";
 import registerPage from "../../assets/authImages/registerPage.jpg";
+import { AuthContext } from "../../Provider/AuthProvider/AuthProvider";
 
 const Register = () => {
+  const { signUp } = useContext(AuthContext);
+
+  const handleRegister = (e) => {
+    e.preventDefault();
+
+    const name = e.target.name.value;
+    const email = e.target.email.value;
+    const photo_URL = e.target.photo_URL.value;
+    const password = e.target.password.value;
+    console.log(name, email, photo_URL, password);
+
+    signUp(email, password)
+      .then((result) => {
+        console.log(result.user);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+
   return (
     <div className="flex items-center justify-center mb-36 mt-12">
       <div>
@@ -8,7 +30,7 @@ const Register = () => {
       </div>
 
       <div className="card bg-base-100 border w-[600px] shadow-lg">
-        <form className="card-body">
+        <form className="card-body" onSubmit={handleRegister}>
           <div className="form-control">
             <label className="label">
               <span className="label-text font-bold text-xl">Name</span>
