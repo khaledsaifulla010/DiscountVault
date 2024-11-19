@@ -5,8 +5,19 @@ import { useContext } from "react";
 import { AuthContext } from "../../Provider/AuthProvider/AuthProvider";
 
 const Login = () => {
-  const { name } = useContext(AuthContext);
-  console.log(name);
+  const { googleSignIn } = useContext(AuthContext);
+
+  // Sign in With Google//
+
+  const handleGoogleSignIn = () => {
+    googleSignIn()
+      .then((result) => {
+        console.log(result.user);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
 
   return (
     <div>
@@ -64,7 +75,10 @@ const Login = () => {
             </Link>
           </div>
           <div className="divider px-9">OR</div>
-          <button className="border p-2 rounded-xl w-[530px] flex items-center gap-2 ml-8 mb-8 mt-2 text-lg shadow-md font-bold transition duration-500 ease-in-out transform hover:scale-105 active:scale-95">
+          <button
+            onClick={handleGoogleSignIn}
+            className="border p-2 rounded-xl w-[530px] flex items-center gap-2 ml-8 mb-8 mt-2 text-lg shadow-md font-bold transition duration-500 ease-in-out transform hover:scale-105 active:scale-95"
+          >
             <FcGoogle className="ml-40 text-2xl mt-1"></FcGoogle>
             Login with Google
           </button>
