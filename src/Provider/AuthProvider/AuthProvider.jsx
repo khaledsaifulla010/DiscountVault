@@ -16,7 +16,7 @@ const googleProvider = new GoogleAuthProvider();
 
 const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
-  const [loading,setLoading]= useState(true)
+  const [loading, setLoading] = useState(true);
 
   //Sign In with Google //
 
@@ -38,14 +38,12 @@ const AuthProvider = ({ children }) => {
     return signInWithEmailAndPassword(auth, email, password);
   };
 
-
   // Sign Out User //
 
-
-  const signOutUser = ()=>{
+  const signOutUser = () => {
     setLoading(false);
-    return signOut(auth)
-  }
+    return signOut(auth);
+  };
 
   // Current User //
 
@@ -66,13 +64,11 @@ const AuthProvider = ({ children }) => {
     };
   }, []);
 
-
-
   // Forget Password //
 
-  const forgetPassword=(email)=>{
-    return sendPasswordResetEmail(auth,email)
-  }
+  const forgetPassword = (email) => {
+    return sendPasswordResetEmail(auth, email);
+  };
 
   const authInfo = {
     googleSignIn,

@@ -2,16 +2,12 @@ import { useContext } from "react";
 import forgetPage from "../../assets/authImages/forgetPage.jpg";
 import { AuthContext } from "../../Provider/AuthProvider/AuthProvider";
 import { toast } from "react-toastify";
+import { useNavigate } from "react-router-dom";
 
 const ForgetPassword = () => {
-  const { user, loading, forgetPassword, signOutUser } =
-    useContext(AuthContext);
+  const { user, forgetPassword, signOutUser } = useContext(AuthContext);
 
-  if (loading) {
-    return (
-      <span className="loading loading-infinity loading-lg text-secondary ml-[650px]"></span>
-    );
-  }
+  const redirect = useNavigate();
 
   const handleResetButton = (e) => {
     e.preventDefault();
@@ -19,11 +15,12 @@ const ForgetPassword = () => {
     // console.log(currentEmail);
     forgetPassword(currentEmail).then(() => {
       console.log("Forget Password Email sent");
-      toast.success("Forget Password Email Sent!");
+      toast.success("Forget Password Email Sent!", { position: "top-center" });
     });
     signOutUser(() => {
       console.log("signout user");
     });
+    redirect("/");
   };
 
   return (
