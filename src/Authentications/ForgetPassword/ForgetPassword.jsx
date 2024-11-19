@@ -1,15 +1,26 @@
 import { useContext } from "react";
 import forgetPage from "../../assets/authImages/forgetPage.jpg";
 import { AuthContext } from "../../Provider/AuthProvider/AuthProvider";
+import { toast } from "react-toastify";
 
 const ForgetPassword = () => {
-  const { user, loading } = useContext(AuthContext);
+  const { user, loading, forgetPassword } = useContext(AuthContext);
 
   if (loading) {
     return (
       <span className="loading loading-infinity loading-lg text-secondary ml-[650px]"></span>
     );
   }
+
+  const handleResetButton = (e) => {
+    e.preventDefault();
+    const currentEmail = user.email;
+    // console.log(currentEmail);
+    forgetPassword(currentEmail).then(() => {
+      console.log("Forget Password Email sent");
+      toast.success("Forget Password Email Sent!");
+    });
+  };
 
   return (
     <div className="flex items-center justify-center mb-36 mt-12">
@@ -18,7 +29,7 @@ const ForgetPassword = () => {
       </div>
 
       <div className="card bg-base-100 border w-[600px] shadow-lg">
-        <form className="card-body">
+        <form className="card-body" onSubmit={handleResetButton}>
           <div className="form-control">
             <label className="label">
               <span className="label-text font-bold text-xl">Email</span>
