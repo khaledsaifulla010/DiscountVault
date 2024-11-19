@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import loginPage from "../../assets/authImages/loginPage.jpg";
 
 const Login = () => {
@@ -34,7 +35,7 @@ const Login = () => {
               <label className="label">
                 <a
                   href="#"
-                  className=" text-red-600 underline hover:text-red-700 font-semibold"
+                  className=" text-red-600 underline hover:text-red-700 font-semibold "
                 >
                   Forgot password?
                 </a>
@@ -46,6 +47,15 @@ const Login = () => {
               </button>
             </div>
           </form>
+          <div className="ml-8 -mt-4 flex items-center gap-2 p-2">
+            <h1 className="font-bold text-slate-600 text-lg">
+              Don't have any account?
+            </h1>
+            <Link>
+              <h1 className="font-bold text-green-600 text-lg">Register</h1>
+            </Link>
+          </div>
+          <div className="divider px-9">OR</div>
         </div>
       </div>
     </div>
