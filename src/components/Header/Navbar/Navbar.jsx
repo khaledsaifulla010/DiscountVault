@@ -59,22 +59,32 @@ const Navbar = () => {
           </div>
           <ul
             tabIndex={0}
-            className="dropdown-content  menu bg-base-100  rounded-box z-[1] w-48 p-2 shadow border-2 font-bold"
+            className="dropdown-content  menu  rounded-box z-[1] w-48 p-2 h-[200px] shadow border-2 font-bold bg-white "
           >
             <li>
-              <Link to={"/myProfile"} className="text-lg ml-2">
-                My Profile <CgProfile />
+              <Link
+                to={"/myProfile"}
+                className="text-lg ml-1 border p-2 rounded-xl text-blue-500 border-blue-300 bg-blue-200 hover:bg-blue-200 mt-3"
+              >
+                <span className="ml-2">My Profile</span> <CgProfile />
               </Link>
             </li>
             <li>
-              <Link to={"/login"} className="text-lg ml-10 -mt-2">
-                Login <FiLogIn />
+              <Link
+                to={"/login"}
+                className="text-lg ml-2 border p-2 rounded-xl text-purple-500 border-purple-300 bg-purple-200 hover:bg-purple-200 mt-2 "
+              >
+                <span className="ml-9">Login</span>
+                <FiLogIn />
               </Link>
             </li>
             <li>
               {user ? (
-                <button onClick={hadnleSignOut} className="text-lg ml-10 -mt-2">
-                  LogOut <FiLogOut />
+                <button
+                  onClick={hadnleSignOut}
+                  className="text-lg ml-2 border p-2 rounded-xl text-red-500 border-red-300 bg-red-200 hover:bg-red-200 mt-2"
+                >
+                  <span className="ml-9">LogOut</span> <FiLogOut />
                 </button>
               ) : (
                 ""
