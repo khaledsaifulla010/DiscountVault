@@ -12,9 +12,7 @@ const Login = () => {
 
   const [showPassword, setShowPassword] = useState(false);
   if (loading) {
-    (
-     <span className="loading loading-infinity loading-lg text-secondary ml-[650px]"></span>
-   );
+    <span className="loading loading-infinity loading-lg text-secondary ml-[650px]"></span>;
   }
 
   // Sign in With Google//
@@ -23,7 +21,9 @@ const Login = () => {
     googleSignIn()
       .then((result) => {
         console.log(result.user);
-        toast.success("Login Sucessfully!", { position: "top-center" });
+        toast.success(`Welcome Mr. ${result.user.displayName}!`, {
+          position: "top-center",
+        });
         redirect("/");
       })
       .catch((error) => {
@@ -44,7 +44,9 @@ const Login = () => {
     logIn(email, password)
       .then((result) => {
         console.log(result.user);
-        toast.success("Login Sucessfully!", { position: "top-center" });
+        toast.success(`Welcome Mr. ${result.user.displayName}!`, {
+          position: "top-center",
+        });
         redirect("/");
       })
       .catch((error) => {

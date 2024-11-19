@@ -11,9 +11,7 @@ const Register = () => {
 
   const [showPassword, setShowPassword] = useState(false);
   if (loading) {
-    (
-     <span className="loading loading-infinity loading-lg text-secondary ml-[650px]"></span>
-   );
+    <span className="loading loading-infinity loading-lg text-secondary ml-[650px]"></span>;
   }
 
   const handleRegister = (e) => {
