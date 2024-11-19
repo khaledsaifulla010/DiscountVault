@@ -18,7 +18,12 @@ const MyProfile = () => {
             src={user.photoURL}
             alt=""
           />
-
+          <div
+            className="tooltip absolute left-[115px] top-[110px] tooltip-right tooltip-success"
+            data-tip="Active"
+          >
+            <div className="w-4 h-4 rounded-full border-2 bg-green-600 "></div>
+          </div>
           <div>
             <h1 className="font-bold text-2xl ml-8">{user?.displayName} </h1>
             <h2 className="font-bold text-lg text-slate-500">{user?.email}</h2>
