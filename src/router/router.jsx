@@ -4,6 +4,7 @@ import AllBrands from "../components/AllBrands/AllBrands";
 import Home from "../components/Home/Home";
 import CouponPage from "../components/CouponPage/CouponPage";
 import ErrorPage from "../ErrorPage/ErrorPage";
+import Login from "../Authentications/Login/Login";
 
 const router = createBrowserRouter([
   {
@@ -31,6 +32,10 @@ const router = createBrowserRouter([
           return newData;
         },
       },
+      {
+        path:'/login',
+        element: <Login></Login>
+      }
     ],
   },
 ]);
