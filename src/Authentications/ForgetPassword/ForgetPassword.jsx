@@ -4,7 +4,8 @@ import { AuthContext } from "../../Provider/AuthProvider/AuthProvider";
 import { toast } from "react-toastify";
 
 const ForgetPassword = () => {
-  const { user, loading, forgetPassword } = useContext(AuthContext);
+  const { user, loading, forgetPassword, signOutUser } =
+    useContext(AuthContext);
 
   if (loading) {
     return (
@@ -19,6 +20,9 @@ const ForgetPassword = () => {
     forgetPassword(currentEmail).then(() => {
       console.log("Forget Password Email sent");
       toast.success("Forget Password Email Sent!");
+    });
+    signOutUser(() => {
+      console.log("signout user");
     });
   };
 
