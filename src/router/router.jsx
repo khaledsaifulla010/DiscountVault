@@ -5,6 +5,7 @@ import Home from "../components/Home/Home";
 import CouponPage from "../components/CouponPage/CouponPage";
 import ErrorPage from "../ErrorPage/ErrorPage";
 import Login from "../Authentications/Login/Login";
+import Register from "../Authentications/Register/Register";
 
 const router = createBrowserRouter([
   {
@@ -35,6 +36,10 @@ const router = createBrowserRouter([
       {
         path:'/login',
         element: <Login></Login>
+      },
+      {
+        path:'/register',
+        element: <Register></Register>
       }
     ],
   },
