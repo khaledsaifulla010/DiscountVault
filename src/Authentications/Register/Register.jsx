@@ -2,9 +2,11 @@ import { useContext } from "react";
 import registerPage from "../../assets/authImages/registerPage.jpg";
 import { AuthContext } from "../../Provider/AuthProvider/AuthProvider";
 import { toast } from "react-toastify";
+import { useNavigate } from "react-router-dom";
 
 const Register = () => {
   const { signUp } = useContext(AuthContext);
+  const redirect = useNavigate();
 
   const handleRegister = (e) => {
     e.preventDefault();
@@ -19,6 +21,7 @@ const Register = () => {
       .then((result) => {
         console.log(result.user);
         toast.success("Register Sucessfully!", { position: "top-center" });
+        redirect("/");
       })
       .catch((error) => {
         console.log(error);
