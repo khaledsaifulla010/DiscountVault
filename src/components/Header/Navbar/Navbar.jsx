@@ -50,7 +50,7 @@ const Navbar = () => {
                 <img
                   src={userIcon}
                   alt="Default User"
-                  className="w-10 h-10 rounded-full border-2 p-1"
+                  className="w-16 h-16 rounded-full border-2 p-1"
                 />
               )
             ) : (

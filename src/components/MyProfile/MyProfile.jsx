@@ -27,7 +27,7 @@ const MyProfile = () => {
               <img
                 src={userIcon}
                 alt="Default User"
-                className="w-10 h-10 rounded-full border-2 p-1"
+                className="w-24 h-24 rounded-full border-2 p-1"
               />
             )
           ) : (
@@ -41,7 +41,7 @@ const MyProfile = () => {
           </div>
           <div>
             <h1 className="font-bold text-2xl text-purple-700">
-              {user?.displayName}
+              {user?.displayName ?? "N/A"}
             </h1>
             <h2 className="font-bold text-lg text-slate-500">{user?.email}</h2>
             <h3 className="font-bold text-sm text-slate-500">
@@ -99,9 +99,11 @@ const MyProfile = () => {
             </h1>
           </div>
           <div className="divider px-4 -mt-2"></div>
-          <button className="px-4 py-2  bg-blue-500 text-white rounded-lg shadow-md hover:bg-blue-600 transition duration-500 ease-in-out transform hover:scale-105 active:scale-95 font-bold w-[800px] mb-6 mt-4 ml-12 text-lg">
-            <Link to={"/updateInformation"}> Update Your Information</Link>
-          </button>
+          <Link to={"/updateInformation"}>
+            <button className="px-4 py-2  bg-blue-500 text-white rounded-lg shadow-md hover:bg-blue-600 transition duration-500 ease-in-out transform hover:scale-105 active:scale-95 font-bold w-[800px] mb-6 mt-4 ml-12 text-lg">
+              Update Your Information
+            </button>
+          </Link>
         </div>
       </div>
     </div>
