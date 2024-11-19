@@ -6,6 +6,7 @@ import CouponPage from "../components/CouponPage/CouponPage";
 import ErrorPage from "../ErrorPage/ErrorPage";
 import Login from "../Authentications/Login/Login";
 import Register from "../Authentications/Register/Register";
+import ForgetPassword from "../Authentications/ForgetPassword/ForgetPassword";
 
 const router = createBrowserRouter([
   {
@@ -40,6 +41,10 @@ const router = createBrowserRouter([
       {
         path:'/register',
         element: <Register></Register>
+      },
+      {
+        path:'/forgetPassword',
+        element: <ForgetPassword></ForgetPassword>
       }
     ],
   },

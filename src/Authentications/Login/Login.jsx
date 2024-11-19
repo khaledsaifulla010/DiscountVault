@@ -36,12 +36,12 @@ const Login = () => {
                 required
               />
               <label className="label">
-                <a
-                  href="#"
+                <Link
+                  to={"/forgetPassword"}
                   className="text-red-600 underline hover:text-red-700 font-semibold"
                 >
                   Forgot password?
-                </a>
+                </Link>
               </label>
             </div>
             <div className="form-control mt-6">
