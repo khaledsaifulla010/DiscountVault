@@ -2,12 +2,20 @@ import { Rating } from "@smastrom/react-rating";
 
 import "@smastrom/react-rating/style.css";
 import "animate.css";
+import { Link } from "react-router-dom";
 
 const AllBrandCard = ({ brand }) => {
-  console.log(brand);
+  // console.log(brand);
 
-  const { brand_name, brand_logo, rating, description, category, isSaleOn } =
-    brand;
+  const {
+    id,
+    brand_name,
+    brand_logo,
+    rating,
+    description,
+    category,
+    isSaleOn,
+  } = brand;
 
   return (
     <div>
@@ -40,9 +48,12 @@ const AllBrandCard = ({ brand }) => {
           </div>
 
           <div className="mt-8 flex items-center justify-between">
-            <button className="p-2  rounded-xl font-bold text-lg bg-slate-100 text-teal-700">
+            <Link
+              to={`/brand/${id}`}
+              className="p-2  rounded-xl font-bold text-lg bg-slate-100 text-teal-700"
+            >
               View Coupons
-            </button>
+            </Link>
             {isSaleOn && (
               <h1 className="font-bold text-red-600 text-lg animate__animated animate__bounce">
                 Sales is on
