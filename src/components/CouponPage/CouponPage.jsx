@@ -1,4 +1,4 @@
-import { useLoaderData, useParams } from "react-router-dom";
+import { Link, useLoaderData, useParams } from "react-router-dom";
 import { Rating } from "@smastrom/react-rating";
 
 import "@smastrom/react-rating/style.css";
@@ -7,7 +7,7 @@ const CouponPage = () => {
   const allCoupons = useLoaderData();
   console.log(allCoupons);
 
-  const { brand_name, brand_logo, rating, coupons } = allCoupons;
+  const { brand_name, brand_logo, rating, coupons, shopLink } = allCoupons;
 
   return (
     <div>
@@ -52,9 +52,19 @@ const CouponPage = () => {
                 <strong>Type:</strong> {coupon.couponType}
               </p>
             </div>
-            <button className="px-4 py-2 mt-8 bg-blue-500 text-white rounded-lg shadow-md hover:bg-blue-600 transition-colors duration-300 w-full font-bold">
-              Copy Code
-            </button>
+            <div className="flex items-center justify-between gap-4 mt-12">
+              <button className="px-4 py-2  bg-blue-500 text-white rounded-lg shadow-md hover:bg-blue-600 transition-colors duration-300 font-bold w-full">
+                Copy Code
+              </button>
+              <a
+                href={shopLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-4 py-2  bg-green-500 text-white rounded-lg shadow-md hover:bg-green-600 transition-colors duration-300 font-bold w-full text-center"
+              >
+                Use Now
+              </a>
+            </div>
           </div>
         ))}
       </div>
