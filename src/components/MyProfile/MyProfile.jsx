@@ -9,10 +9,11 @@ const MyProfile = () => {
       <div className="card border max-w-[900px] mx-auto rounded-xl">
         <div className="flex items-center ml-12 mt-8 gap-4">
           <img
-            className="w-24 h-24  rounded-full border-2 border-green-500 p-1"
+            className="w-24 h-24  rounded-full border-2  p-1"
             src={user.photoURL}
             alt=""
           />
+          <div className="w-4 h-4 rounded-full border-2 bg-green-600 absolute left-[115px] top-[110px]"></div>
           <div>
             <h1 className="font-bold text-2xl">Name: {user?.displayName} </h1>
             <h2 className="font-bold text-lg text-slate-600">
