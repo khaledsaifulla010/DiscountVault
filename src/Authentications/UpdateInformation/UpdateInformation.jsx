@@ -1,12 +1,16 @@
 import { useContext } from "react";
 import updatePage from "../../assets/authImages/updatePage.jpg";
 import { AuthContext } from "../../Provider/AuthProvider/AuthProvider";
+import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 
 const UpdateInformation = () => {
   const { updateUserInfo, loading } = useContext(AuthContext);
 
+  const redirect = useNavigate();
+
   if (loading) {
-    return(
+    return (
       <span className="loading loading-infinity loading-lg text-secondary ml-[650px]"></span>
     );
   }
@@ -21,13 +25,15 @@ const UpdateInformation = () => {
     updateUserInfo(name, photo_URL)
       .then(() => {
         console.log("info updated");
-        // toast.success("Login Sucessfully!", { position: "top-center" });
-        // redirect("/");
+        toast.success("Update Information Sucessfully!", {
+          position: "top-center",
+        });
+        redirect("/");
       })
       .catch((error) => {
         console.log(error);
         console.log(error);
-        // toast.error("Something Went Wrong!", { position: "top-center" });
+        toast.error("Something Went Wrong!", { position: "top-center" });
       });
   };
   return (
