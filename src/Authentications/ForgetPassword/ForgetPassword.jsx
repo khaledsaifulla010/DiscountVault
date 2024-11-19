@@ -5,9 +5,16 @@ import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
 
 const ForgetPassword = () => {
-  const { user, forgetPassword, signOutUser } = useContext(AuthContext);
+  const { user, loading, forgetPassword, signOutUser } =
+    useContext(AuthContext);
 
   const redirect = useNavigate();
+
+  if (loading) {
+    return (
+      <span className="loading loading-infinity loading-lg text-secondary ml-[650px]"></span>
+    );
+  }
 
   const handleResetButton = (e) => {
     e.preventDefault();

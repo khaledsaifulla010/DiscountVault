@@ -7,11 +7,15 @@ import { toast } from "react-toastify";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 const Login = () => {
-  const { googleSignIn, logIn } = useContext(AuthContext);
+  const { googleSignIn, logIn, loading } = useContext(AuthContext);
   const redirect = useNavigate();
 
   const [showPassword, setShowPassword] = useState(false);
-  
+  if (loading) {
+   return (
+     <span className="loading loading-infinity loading-lg text-secondary ml-[650px]"></span>
+   );
+  }
 
   // Sign in With Google//
 
