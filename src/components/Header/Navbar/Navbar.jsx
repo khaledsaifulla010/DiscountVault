@@ -6,9 +6,17 @@ import { FiLogIn } from "react-icons/fi";
 import { useContext } from "react";
 import { AuthContext } from "../../../Provider/AuthProvider/AuthProvider";
 import userIcon from "../../../assets/authImages/user.png";
+import { FiLogOut } from "react-icons/fi";
+import { toast } from "react-toastify";
 
 const Navbar = () => {
-  const { user } = useContext(AuthContext);
+  const { user, signOutUser } = useContext(AuthContext);
+
+  const hadnleSignOut = () => {
+    signOutUser().then(() => {
+      toast.success("Successfully Logged Out !", { position: "top-center" });
+    });
+  };
 
   return (
     <div className="navbar bg-base-100">
@@ -50,12 +58,21 @@ const Navbar = () => {
           </div>
           <ul
             tabIndex={0}
-            className="dropdown-content  menu  rounded-box z-[1] w-40 p-2 shadow border-2 font-bold"
+            className="dropdown-content  menu bg-base-100  rounded-box z-[1] w-40 p-2 shadow border-2 font-bold"
           >
             <li>
               <Link to={"/login"} className="text-lg ml-4">
                 Login <FiLogIn />
               </Link>
+            </li>
+            <li>
+              {user ? (
+                <button onClick={hadnleSignOut} className="text-lg ml-4">
+                  LogOut <FiLogOut />
+                </button>
+              ) : (
+                ""
+              )}
             </li>
           </ul>
         </div>
