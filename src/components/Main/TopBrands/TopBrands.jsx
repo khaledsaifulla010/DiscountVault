@@ -16,24 +16,33 @@ import { Link } from "react-router-dom";
 const TopBrands = () => {
   return (
     <div className="mt-20 mb-12">
-      <h1 className="text-6xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-r from-red-500 to-purple-600">
+      <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-r from-red-500 to-purple-600">
         Our Top Brands
       </h1>
 
       <div className="mt-12">
-        <Link to={'/brands'}>
-          <Marquee pauseOnHover={true}>
-            <img className="w-36 mr-12 mt-4" src={image1} />
-            <img className="w-36 mr-12" src={image2} />
-            <img className="w-36 mr-12" src={image3} />
-            <img className="w-36 mr-12" src={image4} />
-            <img className="w-24 rounded-xl h-16 mr-12" src={image5} />
-            <img className="w-36 mr-12" src={image6} />
-            <img className="w-36 mr-12" src={image7} />
-            <img className="w-36 mr-12" src={image8} />
-            <img className="w-36 mr-12" src={image9} />
-            <img className="w-36 mr-12" src={image10} />
-            <img className="w-36 mr-12" src={image11} />
+        <Link to={"/brands"}>
+          <Marquee pauseOnHover={true} speed={50}>
+            {[
+              image1,
+              image2,
+              image3,
+              image4,
+              image5,
+              image6,
+              image7,
+              image8,
+              image9,
+              image10,
+              image11,
+            ].map((image, index) => (
+              <img
+                key={index}
+                className={`w-24 sm:w-28 lg:w-36 h-auto rounded-xl mr-8`}
+                src={image}
+                alt={`Brand ${index + 1}`}
+              />
+            ))}
           </Marquee>
         </Link>
       </div>
