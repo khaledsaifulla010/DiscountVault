@@ -8,20 +8,17 @@ import TopBrands from "../Main/TopBrands/TopBrands";
 
 const Home = () => {
     return (
-      <div className="max-w-[1400px] mx-auto mt-8">
-
+      <div className="max-w-full sm:max-w-[640px] md:max-w-[768px] lg:max-w-[1400px] mx-auto mt-8 px-4 sm:px-6 lg:px-8 lg:ml-0 ml-8">
         <header>
-            <Banner></Banner>
+          <Banner />
         </header>
 
         <main>
-          <TopBrands></TopBrands>
-          <BrandsOnSell></BrandsOnSell>
-          <ClientsReview></ClientsReview>
-          <FAQ></FAQ>
+          <TopBrands />
+          <BrandsOnSell />
+          <ClientsReview />
+          <FAQ />
         </main>
-
-      
       </div>
     );
 };

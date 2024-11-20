@@ -4,9 +4,9 @@ const SingleBrandCard = ({ singleBrand }) => {
   const { brand_name, brand_logo, coupons, category, isSaleOn } = singleBrand;
 
   return (
-    <div>
+    <div className="lg:w-full md:w-[768px] w-[640px]">
       {isSaleOn && (
-        <div className="card card-compact w-[400px] h-[250px] border-2 shadow-md hover:shadow-lg transition-shadow duration-300 rounded-lg">
+        <div className="card card-compact lg:w-[400px] h-[250px] border-2 shadow-md hover:shadow-lg transition-shadow duration-300 rounded-lg">
           <figure className="flex justify-center ">
             <img
               className="w-36 object-contain"

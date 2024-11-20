@@ -9,43 +9,23 @@ import slider4 from "../../../assets/slider/slider-4.jpeg";
 const Banner = () => {
   return (
     <div className="mt-12">
-      <Carousel
-        showArrows={true}
-        showThumbs={false}
-        autoPlay={true}
-        infiniteLoop={true}
-        interval={3000}
-        showStatus={false}
-        className="rounded-xl"
-      >
-        <div>
-          <img
-            className="rounded-xl object-cover"
-            src={slider1}
-            alt="Slide 1"
-          />
-        </div>
-        <div>
-          <img
-            className="rounded-xl object-cover"
-            src={slider2}
-            alt="Slide 2"
-          />
-        </div>
-        <div>
-          <img
-            className="rounded-xl object-cover"
-            src={slider3}
-            alt="Slide 3"
-          />
-        </div>
-        <div>
-          <img
-            className="rounded-xl object-cover"
-            src={slider4}
-            alt="Slide 4"
-          />
-        </div>
+      <Carousel className=" lg:w-full md:w-[768px] w-[640px]">
+        <img
+          className="rounded-xl w-full "
+          src={slider1}
+        />
+        <img
+          className="rounded-xl w-full"
+          src={slider2}
+        />
+        <img
+          className="rounded-xl w-full"
+          src={slider3}
+        />
+        <img
+          className="rounded-xl w-full"
+          src={slider4}
+        />
       </Carousel>
     </div>
   );

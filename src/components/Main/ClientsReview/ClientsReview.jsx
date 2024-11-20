@@ -18,8 +18,8 @@ const ClientsReview = () => {
   }, []);
 
   return (
-    <div>
-      <h1 className="text-6xl font-bold text-center bg-clip-text  text-transparent bg-gradient-to-r from-pink-500 to-purple-600">
+    <div className=" lg:w-full md:w-[768px] w-[640px]">
+      <h1 className="lg:text-6xl text-5xl font-bold text-center bg-clip-text  text-transparent bg-gradient-to-r from-pink-500 to-purple-600">
         Our Clients Reviews
       </h1>
 
@@ -32,14 +32,14 @@ const ClientsReview = () => {
           <SwiperSlide key={review.id} review={review}>
             <div>
               <img
-                className="w-36 rounded-full h-36 ml-[620px] border"
+                className="lg:w-36 w-24 rounded-full lg:h-36 h-24 lg:ml-[620px] ml-[280px] border"
                 src={review.image}
               />
               <h1 className="text-center font-bold text-3xl mt-4">
                 {review.name}
               </h1>
               <Rating
-                className="ml-[610px] mt-4"
+                className="lg:ml-[610px] ml-[230px] mt-4"
                 style={{ maxWidth: 180 }}
                 value={review.rating}
                 readOnly

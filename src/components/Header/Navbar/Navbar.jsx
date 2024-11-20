@@ -20,7 +20,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="navbar bg-base-100 px-4">
+    <div className="navbar bg-base-100 px-4 lg:w-full md:w-[768px] w-[640px] lg:ml-0 ml-16">
       <div className="navbar-start">
         <Link to={"/"}>
           <div className="flex gap-2 items-center">
@@ -32,7 +32,7 @@ const Navbar = () => {
         </Link>
       </div>
 
-      <div className="navbar-center hidden lg:flex">
+      <div className="navbar-center flex-grow hidden lg:flex">
         <ul className="menu menu-horizontal px-1 flex items-center gap-8 font-bold text-base sm:text-lg">
           <NavLink to={"/"}>Home</NavLink>
           <NavLink to={"/brands"}>Brands</NavLink>
@@ -40,7 +40,7 @@ const Navbar = () => {
         </ul>
       </div>
 
-      <div className="navbar-end">
+      <div className="navbar-end flex items-center">
         <div className="dropdown dropdown-hover dropdown-bottom dropdown-end">
           <div tabIndex={0} role="button" className="text-3xl sm:text-4xl m-1">
             {user ? (
@@ -63,7 +63,7 @@ const Navbar = () => {
           </div>
           <ul
             tabIndex={0}
-            className="dropdown-content menu rounded-box z-[1] w-48 p-2  shadow border-2 font-bold bg-white"
+            className="dropdown-content menu rounded-box z-[1] w-48 p-2 shadow border-2 font-bold bg-white"
           >
             <li>
               <Link
@@ -95,8 +95,7 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Mobile Menu */}
-      <div className="navbar-center lg:hidden">
+      <div className="navbar-center lg:hidden justify-between">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
             <svg
@@ -116,7 +115,7 @@ const Navbar = () => {
           </label>
           <ul
             tabIndex={0}
-            className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52 font-bold"
+            className="menu menu-compact dropdown-content mt-3 p-2 z-[1] shadow bg-base-100 rounded-box w-52 font-bold"
           >
             <li>
               <NavLink to={"/"}>Home</NavLink>
